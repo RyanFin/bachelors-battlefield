@@ -1,8 +1,9 @@
 import GoogleMap from "../src/components/GoogleMap";
+
 function App() {
   return (
-    <div>
-      <h1>Bachelor's Battlefield</h1>
+    <div className="flex flex-col items-center justify-center min-h-screen ">
+      <h1>Bachelor&apos;s Battlefield</h1>
       <GoogleMap />
     </div>
   );

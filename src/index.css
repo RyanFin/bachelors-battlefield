@@ -1,25 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Ensure html and body take the full height */
-html,
+
 body {
-  height: 100%;
+  /* height: 100%;
   margin: 0;
-  padding: 0;
-  background-color: rgb(71, 70, 70); /* Set the background color to black */
+  padding: 0; */
+  background-color: rgb(71, 70, 70); /* Set the background color to dark gray */
   color: white; /* Set text color to white for better contrast */
-}
-
-/* Flexbox for centering the map */
-#root {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Full viewport height */
-}
-
-/* Optional: If you need any specific styling for the map container */
-#map {
-  width: 100%;
-  height: 80vh; /* 80% of the viewport height */
-  max-width: 900px; /* Maximum width for larger screens */
-  border: 1px solid #ccc;
 }

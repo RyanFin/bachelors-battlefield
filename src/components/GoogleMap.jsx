@@ -21,11 +21,11 @@ function GoogleMap() {
   }, []);
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex items-center justify-center  bg-gray-100">
       <div
         id="map"
         style={{
-          width: "100vh",
+          width: "120vh",
           height: "80vh", // Responsive height (80% of the viewport height)
           maxWidth: "900px", // Maximum width for larger screens
           border: "1px solid #ccc",
