@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 import { london } from "../assets/locations";
+import { Box, Text, Flex } from "@chakra-ui/react";
+import Legend from "./Legend";
 
 function GoogleMap() {
   useEffect(() => {
@@ -19,7 +21,6 @@ function GoogleMap() {
 
         // Define the coordinates for your polygon
         // This example creates a rough rectangle around central London
-
         const highlightedArea = new window.google.maps.Polygon({
           paths: london,
           strokeColor: "#d2b48c",
@@ -28,9 +29,6 @@ function GoogleMap() {
           fillColor: "#d2b48c",
           fillOpacity: 0.2,
         });
-
-        // Add the polygon to the map
-        highlightedArea.setMap(map);
 
         // Add the polygon to the map
         highlightedArea.setMap(map);
@@ -58,34 +56,6 @@ function GoogleMap() {
         id="map"
         className="w-full max-w-[900px] h-[80vh] border border-gray-300 mb-6"
       ></div>
-
-      {/* Legend */}
-      <div className="bg-black text-white p-4 rounded-lg shadow-lg w-full max-w-lg">
-        <h2 className="text-center text-xl font-bold mb-4">Legend</h2>
-        <div className="flex flex-wrap justify-center gap-4">
-          <LegendItem color="bg-[#d2b48c]" text="Casual Flirt (Easy)" />
-          <LegendItem color="bg-[#c08552]" text="Social Charmer (Normal)" />
-          <LegendItem color="bg-[#964b00]" text="Heartbreaker (Hard)" />
-          <LegendItem
-            color="bg-[#4b3621]"
-            text="Emotional Survivor (Survivor Mode)"
-          />
-          <LegendItem
-            color="bg-[#000000] text-white"
-            text="Lonely Warrior (Grounded)"
-          />
-        </div>
-      </div>
-    </div>
-  );
-}
-
-// LegendItem component
-function LegendItem({ color, text }) {
-  return (
-    <div className="flex items-center space-x-2">
-      <span className={`w-6 h-6 ${color} rounded-full`} />
-      <span>{text}</span>
     </div>
   );
 }
