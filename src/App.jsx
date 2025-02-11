@@ -2,7 +2,7 @@ import GoogleMap from "../src/components/GoogleMap";
 function App() {
   return (
     <div>
-      <h1>My Google Map</h1>
+      <h1>Bachelor's Battlefield</h1>
       <GoogleMap />
     </div>
   );
