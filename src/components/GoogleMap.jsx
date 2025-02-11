@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { london } from "../assets/locations";
-import { Box, Text, Flex } from "@chakra-ui/react";
-import Legend from "./Legend";
+import { difficulties } from "../assets/difficulties";
 
 function GoogleMap() {
   useEffect(() => {
@@ -16,17 +15,17 @@ function GoogleMap() {
       window.initMap = () => {
         const map = new window.google.maps.Map(document.getElementById("map"), {
           center: { lat: 51.5074, lng: -0.1278 }, // London
-          zoom: 9,
+          zoom: 8,
         });
 
         // Define the coordinates for your polygon
         // This example creates a rough rectangle around central London
         const highlightedArea = new window.google.maps.Polygon({
           paths: london,
-          strokeColor: "#d2b48c",
+          strokeColor: difficulties.grounded,
           strokeOpacity: 0.8,
           strokeWeight: 3,
-          fillColor: "#d2b48c",
+          fillColor: difficulties.grounded,
           fillOpacity: 0.2,
         });
 

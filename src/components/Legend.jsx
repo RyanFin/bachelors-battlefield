@@ -1,4 +1,5 @@
 import { Box, Text, Flex } from "@chakra-ui/react";
+import { difficulties } from "../assets/difficulties";
 
 // Legend Component
 export default function Legend() {
@@ -16,11 +17,20 @@ export default function Legend() {
         Legend
       </Text>
       <Flex flexDirection="column" align="center" gap={3}>
-        <LegendItem color="#d2b48c" text="Casual Flirt (Easy)" />
-        <LegendItem color="#c08552" text="Social Charmer (Normal)" />
-        <LegendItem color="#964b00" text="Heartbreaker (Hard)" />
-        <LegendItem color="#4b3621" text="Emotional Survivor (Survivor Mode)" />
-        <LegendItem color="#000000" text="Lonely Warrior (Grounded)" />
+        <LegendItem color={difficulties.easy} text="Casual Flirt (Easy)" />
+        <LegendItem
+          color={difficulties.normal}
+          text="Social Charmer (Normal)"
+        />
+        <LegendItem color={difficulties.hard} text="Heartbreaker (Hard)" />
+        <LegendItem
+          color={difficulties.survivor}
+          text="Emotional Survivor (Survivor Mode)"
+        />
+        <LegendItem
+          color={difficulties.grounded}
+          text="Lonely Warrior (Grounded)"
+        />
       </Flex>
     </Box>
   );
