@@ -1,6 +1,7 @@
 import { Box, Grid, GridItem, Text } from "@chakra-ui/react";
 import GoogleMap from "../src/components/GoogleMap";
 import Legend from "./components/Legend";
+import Tiers from "./components/Tiers";
 
 function App() {
   return (
@@ -31,6 +32,8 @@ function App() {
           <Legend />
         </GridItem>
       </Grid>
+
+      <Tiers />
     </Box>
   );
 }

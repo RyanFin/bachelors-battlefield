@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Box, Text, Flex } from "@chakra-ui/react";
 import { difficulties } from "../assets/difficulties";
 
